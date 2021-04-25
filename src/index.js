@@ -5,7 +5,7 @@ import Operation from './arithmetic';
 const display = document.getElementById("display");
 
 const MyGame = (function() {
-    let info = '' || 0;
+    let info = '';
     let num1 = '';
     let num2 = '';
     let operator = '';
