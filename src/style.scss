@@ -1,0 +1,105 @@
+body {
+    background-color: #b9f7c5 !important;
+    height: 100vh;
+}
+
+p {
+    text-align: center;
+    font-size: 1rem;
+    line-height: 0.5;
+    font-style: italic;
+}
+
+.side-note {
+    margin: 20px 20px;
+    padding: 10px 10px;
+}
+
+.arithmetic {
+    background-color: rgba(236, 86, 31, 0.952);
+}
+
+.calc-body {
+    width: fit-content;
+    margin: 20px auto;
+    border-radius: 20px;
+    background-color: black;
+    padding: 20px 20px;
+}
+
+.display-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.display {
+    width: 400px;
+    height: 100px;
+    border-radius: 10px;
+    background-color: burlywood;
+    margin: 20px auto;
+    padding: 10px 10px;
+    text-align: end;
+    font-size: 3rem;
+    font-weight: 300;
+    border: none;
+}
+
+.power-btn {
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    padding: 5px;
+    justify-content: flex-end;
+    margin: 10px auto;
+    position: relative;
+}
+
+.main-panel {
+    width: 400px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin: 10px auto;
+    position: relative;
+    grid-gap: 5px;
+}
+
+.main-panel input {
+    width: 70px;
+    height: 70px;
+    border-radius: 25%;
+    margin: auto;
+    padding: 10px;
+    font-size: 2.5rem;
+    border: none;
+}
+
+.power-btns {
+    border-radius: 30%;
+    padding: 5px;
+    margin: 5px;
+}
+
+@media only screen and (max-width: 420px) {
+    .main-panel {
+        width: 300px;
+        grid-gap: 3px;
+    }
+
+    .main-panel input {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+
+    .display {
+        width: 300px;
+        font-size: 2rem;
+    }
+
+    .power-btn {
+        width: 300px;
+    }
+}
