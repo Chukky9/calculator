@@ -1,12 +1,6 @@
-const path = require('path');
+const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-    mode: "production",
-    entry: './src/index.js',
-    output: {
-        filename: 'app.js',
-        path: path.resolve(__dirname, 'dist'),
-    },
     module: {
         rules: [
             {
@@ -16,20 +10,24 @@ module.exports = {
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                loader: 'babel-loader',
+                use: {
+                    loader: "babel-loader"
+                }
             },
             {
-                test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-                loader: 'url-loader'
-            },
-            {
-                test: /\.(woff|woff2|eot|ttf|otf)$/i,
-                type: 'asset/resource',
-            },
-            {
-                test: /\.(png|svg|jpg|jpeg|gif)$/i,
-                type: 'asset/resource',
+                test: /\.html$/,
+                use: [
+                    {
+                        loader: "html-loader"
+                    }
+                ]
             },
         ]
-    }
+    },
+    plugins: [
+        new HtmlWebPackPlugin({
+            template: "./src/index.html",
+            filename: "./index.html"
+        })
+    ]
 }
