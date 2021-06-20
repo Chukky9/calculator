@@ -47,7 +47,7 @@ p {
   border: none;
 }
 
-.power-btn {
+.power-btn-div {
   display: flex;
   flex-direction: row;
   width: 400px;
@@ -80,6 +80,12 @@ p {
   border-radius: 30%;
   padding: 5px;
   margin: 5px;
+  background: white;
+}
+
+.numeric-btn,
+.equals {
+  background: white;
 }
 
 @media only screen and (max-width: 420px) {

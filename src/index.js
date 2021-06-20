@@ -80,21 +80,49 @@ const MyGame = (function() {
 })();
 
 document.querySelectorAll(".numeric-btn").forEach(btn => btn.addEventListener("click", function() {
-    MyGame.showDisplay(btn.getAttribute("value"));
+    btn.style.background = "black";
+    btn.style.color = "white";
+    setTimeout(function () {
+        btn.style.background = "white";
+        btn.style.color = "black";
+    }, 100);
+    MyGame.showDisplay(btn.getAttribute("value"))
 }));
 
 document.querySelectorAll(".arithmetic").forEach(btn => btn.addEventListener("click", function() {
+    btn.style.background = "white";
+    setTimeout(function () {
+        btn.style.background = "rgba(236, 86, 31, 0.952)";
+    }, 100);
     MyGame.arithmetic(btn.getAttribute("value"));
 }));
 
 document.querySelector(".equals").addEventListener("click", function() {
+    document.querySelector(".equals").style.background = "black";
+    document.querySelector(".equals").style.color = "white";
+    setTimeout(function () {
+        document.querySelector(".equals").style.background = "white";
+        document.querySelector(".equals").style.color = "black";
+    }, 100);
     MyGame.equalTo();
 });
 
 document.querySelector("#del-btn").addEventListener("click", function() {
+    document.querySelector("#del-btn").style.background = "black";
+    document.querySelector("#del-btn").style.color = "white";
+    setTimeout(function () {
+        document.querySelector("#del-btn").style.background = "white";
+        document.querySelector("#del-btn").style.color = "black";
+    }, 100);
     MyGame.delVal();
 });
 
 document.querySelector("#ac-btn").addEventListener("click", function() {
+    document.querySelector("#ac-btn").style.background = "black";
+    document.querySelector("#ac-btn").style.color = "white";
+    setTimeout(function () {
+        document.querySelector("#ac-btn").style.background = "white";
+        document.querySelector("#ac-btn").style.color = "black";
+    }, 100);
     MyGame.clrDisplay();
 });
